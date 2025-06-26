@@ -2249,15 +2249,20 @@ function requireJsxRuntime () {
 
 var jsxRuntimeExports = requireJsxRuntime();
 
+var reactExports = requireReact();
+
 const Button = ({ label, onClick }) => {
-    return (jsxRuntimeExports.jsx("button", { style: {
-            padding: "10px 20px",
-            backgroundColor: "#007bff",
-            color: "#fff",
-            border: "none",
-            borderRadius: "5px",
-            cursor: "pointer",
-        }, onClick: onClick, children: label }));
+    const [isHovered, setIsHovered] = reactExports.useState(false);
+    const buttonStyle = {
+        transition: 'border 0.3s ease',
+        borderRadius: "5px",
+        background: "#000000",
+        color: "#ffffff",
+        padding: "10px 20px",
+        border: isHovered ? "1px solid rgba(0, 255, 221, 0)" : "1px solid #00ffdd",
+        cursor: "pointer",
+    };
+    return (jsxRuntimeExports.jsx("button", { style: buttonStyle, onMouseEnter: () => setIsHovered(true), onMouseLeave: () => setIsHovered(false), onClick: onClick, children: label }));
 };
 
 export { Button };

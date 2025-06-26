@@ -1,6 +1,6 @@
 {
-  "name": "project-react",
-  "version": "1.0.0",
+  "name": "@keitagames/keitaui",
+  "version": "1.0.9",
   "description": "",
   "main": "index.js",
   "type": "module",
