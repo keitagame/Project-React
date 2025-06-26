@@ -15,7 +15,7 @@ const Button: React.FC<ButtonProps> = ({ label, onClick}) => {
         background: "#000000",
         color: "#ffffff",
         padding: "10px 20px",
-        
+        outline: 'none',
         
         border: isHovered ? "1px solid #00ffdd" : "1px solid rgb(136, 136, 136)",
         

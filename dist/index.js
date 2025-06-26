@@ -2255,14 +2255,30 @@ const Button = ({ label, onClick }) => {
     const [isHovered, setIsHovered] = reactExports.useState(false);
     const buttonStyle = {
         transition: 'border 0.3s ease',
-        borderRadius: "5px",
+        borderRadius: "10px",
         background: "#000000",
         color: "#ffffff",
         padding: "10px 20px",
-        border: isHovered ? "1px solid rgba(0, 255, 221, 0)" : "1px solid #00ffdd",
+        border: isHovered ? "1px solid #00ffdd" : "1px solid rgb(136, 136, 136)",
         cursor: "pointer",
     };
     return (jsxRuntimeExports.jsx("button", { style: buttonStyle, onMouseEnter: () => setIsHovered(true), onMouseLeave: () => setIsHovered(false), onClick: onClick, children: label }));
 };
 
-export { Button };
+const Input = () => {
+    const [isFocused, setIsFocused] = reactExports.useState(false);
+    const inputStyle = {
+        transition: 'border 0.3s ease',
+        borderRadius: "5px",
+        background: "#000000",
+        color: "#ffffff",
+        padding: "10px 20px",
+        border: "1px solid rgb(136, 136, 136)",
+        outline: 'none',
+        borderBottom: isFocused ? "1px solid #00ffdd" : "1px solid rgb(136, 136, 136)",
+        cursor: "pointer",
+    };
+    return (jsxRuntimeExports.jsx("input", { style: inputStyle, onMouseEnter: () => setIsFocused(true), onMouseLeave: () => setIsFocused(false) }));
+};
+
+export { Button, Input };
