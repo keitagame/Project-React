@@ -13,8 +13,8 @@ const Onoff: React.FC<OnoffProps> = () => {
     setIsOn(prev => !prev);
   };
    const switchStyle: CSSProperties = {
-    width: '40px',
-    height: '20px',
+    width: '30px',
+    height: '15px',
     borderRadius: '20px',
     backgroundColor: isOn ? '#00ffdd' : 'rgb(0, 0, 0)',
     border:"1px solid rgb(136, 136, 136)",
@@ -24,14 +24,14 @@ const Onoff: React.FC<OnoffProps> = () => {
   };
 
   const leverStyle: CSSProperties = {
-    width: '20px',
-    height: '20px',
+    width: '15px',
+    height: '15px',
     borderRadius: '50%',
     backgroundColor: 'rgb(255, 255, 255)',
     
     position: 'absolute',
     top: '0px',
-    left: isOn ? '0px' : '20px',
+    left: isOn ? '0px' : '15px',
     transition: 'left 0.3s',
   };
   return (
