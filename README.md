@@ -8,7 +8,7 @@
 ### これは私達のサイトで使うと思うreactコンポーネントライブラリです。
 
 # 使い方
-インストール.
+インストール...
 
 ```
 npm install @keitagames/keitaui
