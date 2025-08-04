@@ -1,0 +1,35 @@
+/* src/components/Tabs.css */
+.tabs {
+  font-family: sans-serif;
+}
+
+.tab-list {
+  display: flex;
+  border-bottom: 2px solid #00000000;
+  margin-bottom: 1rem;
+}
+
+.tab-button {
+  flex: 1;
+  padding: 0.5rem 1rem;
+  background: none;
+  border: none;
+  border-bottom: 2px solid transparent;
+  cursor: pointer;
+  transition: border-color 0.2s;
+}
+
+.tab-button:hover {
+  border-color: #ccc;
+}
+
+.tab-button.active {
+  border-color: #00ffdd;
+  font-weight: bold;
+}
+
+.tab-content {
+  padding: 1rem;
+  border: 1px solid #00ffdd;
+  border-radius: 4px;
+}
