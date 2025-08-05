@@ -9,10 +9,7 @@ export type TabPaneProps = {
   children: ReactNode;
 };
 
-/**
- * TabPane は単に子要素をラップするだけ。
- * レンダリング制御は親の Tabs が行う。
- */
+
 export const TabPane: React.FC<TabPaneProps> = ({ children }) => {
   return <>{children}</>;
 };
@@ -24,10 +21,10 @@ type TabsProps = {
 };
 
 export const Tabs: React.FC<TabsProps> = ({ children, defaultActiveKey }) => {
-  // 子要素を配列化
+  
   const panes = React.Children.toArray(children) as TabPaneElement[];
 
-  // キー一覧と初期選択キー
+  
   const keys = panes.map(p => p.props.tabKey);
  const initialKey =
     defaultActiveKey && keys.includes(defaultActiveKey)
